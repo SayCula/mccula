@@ -5,6 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet"/>
+<link href='https://fonts.googleapis.com/css2?family=VT323' rel='stylesheet'/>
 <style>
 
 body {
@@ -13,15 +14,14 @@ body {
   color: white;
   text-align-last: center;
   background-image: url(https://www.mediafire.com/convkey/0311/gtohw8z8j7jpful9g.jpg);
-  font-family: &#39;VT323&#39;, monospace; 
+  font-family: 'VT323', monospace;
   font-size: 20px;
 }
 
 a {
-  font-family: 'Cairo', sans-serif;
   color: white;
   text-decoration: none;
-  
+ 
 }
 
 * {
@@ -54,25 +54,22 @@ a {
   background-color: #2e2e2e78;
   cursor: pointer;
   color: white;
+  font-family: 'VT323', monospace;
 }
-
 .btn:hover {
   background-color: #ddd;
   color: black;
 }
-
 .btn.active {
   background-color: #666;
   color: white;
 }
-
 </style>
 <style>
 .container {
   position: relative;
   width: 50%;
 }
-
 .image {
   opacity: 1;
   display: block;
@@ -81,7 +78,6 @@ a {
   transition: .5s ease;
   backface-visibility: hidden;
 }
-
 .middle {
   transition: .5s ease;
   opacity: 0;
@@ -91,28 +87,25 @@ a {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-
-
 }
-
 .container:hover .image {
   opacity: 0.3;
 }
-
 .container:hover .middle {
   opacity: 1;
 }
-
 .text {
 	border: 2px solid #ffffff;
-  color: white;
-  font-size: 16px;
+    color: white;
+    font-size: 16px;
 	padding: 7px 30px;
     transition-duration: 0.4s;
+    font-family: 'Cairo', sans-serif;    
 }
 .text:hover {
   background-color: #1ba701;
   border: 0px;
+  
 }
 .checked {
   color: orange;
