@@ -1,0 +1,22 @@
+@media (max-width: 600px) {
+    header >:nth-child(1),header >:nth-child(2){
+        display: none;
+    }
+    header{
+      justify-content: center;
+    }
+    footer > :nth-child(3) ul{
+      display: flex;
+    }
+  }
+  @media (max-width: 1200px) {
+    .hero-section{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 2em;
+    }
+    .privacy-section,.contact-section{
+      padding: 1em 3em;
+    }
+    
+  }

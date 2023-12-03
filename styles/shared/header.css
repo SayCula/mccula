@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@font-face {
+    font-family: cubifyCraft;
+    src: url(../../font/go3v2.ttf);
+}
+.pre-header{ 
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 25px;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    z-index: 101;
+}
+.pre-header p{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0.5em 1em;
+    height: 60px;
+    right: 0;
+    top: 25px;
+    left: 0;
+    background-color: var(--black);
+    z-index: 100;  
+}
+header::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color:  #e6b2fc;
+    left: 1%;
+    top: 4%;
+    filter: blur(150px);
+    pointer-events: none;
+  }
+  
+header::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #ed2ff0;
+    left: 80%;
+    top: 4%;
+    filter: blur(150px);
+    pointer-events: none;
+  }
+header > :nth-child(1) ul{
+    display: flex;
+    column-gap: 1em;
+}
+header > :nth-child(1) ul li{
+    list-style: none;
+}
+header > :nth-child(1) ul li a{
+    transition: ease 0.5s;
+}
+header > :nth-child(1) ul li a:hover{
+    color:#ffffff2e;
+}
+header > :nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > :nth-child(2) button{
+    background-color: #160203;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #ffffff2e;
+    padding: 1em 4em;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+header > :nth-child(2) button:hover{
+    border: 1px solid var(--white);
+}
+header > :nth-child(3) a{
+    font-family: cubifyCraft;
+    font-size: 22px;
+    cursor: pointer;
+}
