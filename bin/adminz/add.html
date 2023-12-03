@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubifyCraft - Add New Post</title>
+    <link rel="stylesheet" href="/bin/styles/css/styles.css">
+    <link rel="stylesheet" href="../bin/styles/css/menuMods.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <style>
+        #mainAddPost {
+            margin: 20px;
+            text-align: center;
+            
+        }
+        #title {
+            font-family: 'CubifyCraft';
+   
+        }
+        #mainAddPost{
+
+            background: rgba(255, 255, 255, 0.122);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0.4px);
+            -webkit-backdrop-filter: blur(0.4px);
+            border: 1px solid rgba(255, 255, 255, 0.64);
+        }
+
+        #mainAddPost , h1,#dNm {
+            margin: 20px;
+        }
+        #mdNm,#date, #inputVmds {
+            padding: 10px 20px;
+            border-radius: 15px;
+            border: 1px solid var(--ColorWH);
+            background: none;
+            margin: 10px;
+            color: var(--ColorWH);
+            text-align: center;
+        }
+        input::placeholder{
+            color: var(--ColorWH);
+            text-align: start;
+            
+        }
+        button{
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid white;
+            color: var(--ColorWH);
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        #menu a{
+            color: var(--ColorWH);
+            padding: 10px 15px;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="main" >
+
+    <h1 id="title">CubifyCraft</h1>
+    <div id="menu">
+        <a href="http://" target="_blank">home</a>
+        <a href="http://" target="_blank">Admin</a>
+
+    </div>
+    <div id="post" >
+
+    </div>
+    <div id="mainAddPost">
+        <h1>Add New Post</h1>
+        <input type="text" id="mdNm" placeholder="Name mode">
+        <input type="date" id="date"> 
+        <select id="vMods"></select>
+        
+        <br>
+        <select id="select" multiple>
+            <option value="">Forge</option>
+            <option value="">Fabric</option>
+        </select>
+        <button id="Btnadd">add</button>
+    </div>
+    <br>
+    <div id="menuVmods">
+        <h1>Add New Version</h1>
+        <input type="text" id="inputVmds" placeholder="x.xx.x">
+        <button id="addVmds">add</button>
+        
+    </div>
+</div>
+<script>
+    
+</script>
+<script src="/add.js"></script>
+</body>
+</html>
