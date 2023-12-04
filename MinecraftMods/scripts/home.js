@@ -3,7 +3,7 @@ let userHTML = '';
 mods.forEach((mod) => {
   userHTML += ` 
   <div class="checkbox-container">
-    <label for="${mod.id}">
+    <label for="${mod.id}" id="${mod.id}">
         <input type="checkbox" id="${mod.id}" 
         data-mod-name="${mod.name}"
         data-mod-version="${mod.version}"
