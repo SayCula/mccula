@@ -73,7 +73,7 @@ header > :nth-child(2){
     justify-content: center;
     align-items: center;
 }
-header > :nth-child(2) button{
+header > :nth-child(2) a{
     background-color: #160203;
     font-size: 16px;
     font-weight: 500;
@@ -82,7 +82,7 @@ header > :nth-child(2) button{
     cursor: pointer;
     transition: ease 0.5s;
 }
-header > :nth-child(2) button:hover{
+header > :nth-child(2) a:hover{
     border: 1px solid var(--white);
 }
 header > :nth-child(3) a{
