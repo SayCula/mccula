@@ -53,9 +53,29 @@
   pointer-events: none;
 }
 .main-section{
-  background-color: pink;
+  background-color: var(--GrayT);
   min-height: 700px;
   margin: 1em 3em;
+}
+
+.forge {
+  background: var(--ColorForge);
+  border: 1px solid var(--white);
+}
+.fabric {
+  background: var(--ColorForge);
+  border: 1px solid var(--white);
+}
+
+label {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  align-content: center;
+}
+
+.mods-lists {
+  padding: 10px 15px;
 }
 .main-section > :nth-child(1){
   display: flex;
