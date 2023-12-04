@@ -58,11 +58,11 @@
   margin: 1em 3em;
 }
 
-.forge {
+.Forge {
   background: var(--ColorForge);
   border: 1px solid var(--white);
 }
-.fabric {
+.Fabric {
   background: var(--ColorForge);
   border: 1px solid var(--white);
 }
