@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/shared/general.css">
+    <style>
+        * {
+            transition: all 0.3s;
+        }
+        #main {
+            display: flex;
+            justify-content: center;
+            background-image: url(../imgs/bgimg.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+        #inpts{
+            display: flex;
+            margin: 3rem;
+            width: 70%;
+            padding: 15px;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        #inptsFiles{
+            margin: 20px;
+            padding: 15px;
+        }
+        #inptFileL ,#inptImgL {
+            margin: 10px;
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+        }
+        #inptImgL {
+            border: 1px solid white;
+            border-radius: 15px;
+        }
+        #inptImgL:hover {
+            padding-left: 2rem;
+            background-color:  white;
+            color: black;
+            border-radius: 15px;
+            background-image: url(../imgs/upload.svg);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 2em;
+        }
+        #inptFileL::before {
+            content: 'upload File';
+            transition: all 0.3s;
+        }
+        #inptFileL:hover::before{
+            padding: 15px 4rem;
+            content: '';
+            background-image: url(../imgs/upload.svg);
+            /* background-color:  white; */
+            border: 1px solid;
+            color: black;
+            border-radius: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 2em;
+            box-shadow: 3px 3px white;
+        }
+        #inptFilel:hover {
+        }
+        #inptsText {
+            margin: 20px;
+        }
+        input , select, option{
+            color: black;
+        }
+        p#fileNameP {
+            margin-top: 2rem;
+            padding-top: 15px;
+            text-align: center;
+            text-shadow: 3px 3px 5px black;
+        }
+        span#imgP {
+            color: darksalmon;
+        }
+        #inptsText {
+            
+        }
+        input[type=text] {
+            border: 1px solid white;
+            background: none;
+            padding: 10px 15px;
+            margin: 10px;
+        }
+        input::placeholder{
+            color: white;
+        }
+        #luncher {
+            padding: 10px 15px;
+            background: rgba(72, 166, 243, 0.304) ;
+            color: white;
+            border: 1px solid rgb(72, 166, 243);
+        }
+        input[type=submit]{
+            padding: 10px 25px;
+            background-color: rgba(72, 166, 243, 0.304);
+            color: white;
+            border: 1px solid rgb(72, 166, 243);
+        }
+        input[type=submit]:hover{
+            padding: 10px 25px;
+            background-color: rgb(72, 166, 243);
+            color: white;
+            border: 1px solid  rgba(72, 166, 243, 0.304);
+            box-shadow: 1px 1px 1px;
+        }
+        header {
+            position: absolute;
+            top: 16px;
+            background-color: rgba(72, 166, 243, 0.304);
+            padding: 18px 10px;
+        }
+        header a:hover {
+            padding: 10px 15px;
+            background-color: rgb(72, 166, 243);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <div id="inpts" class="glass">
+            <header>
+                <nav>
+                    <a href="">home</a>
+                    <a href="">static</a>
+                    <a href="">test</a>
+                    <a href="">test</a>
+                </nav>
+            </header>
+            <div id="inptsFiles">
+                <label for="inptImg" id="inptImgL">
+                    upload image
+                    <input type="file" id="inptImg" style="display: none;" accept="image/png, image/jpeg">
+                </label>
+                
+                <label for="inptFile" id="inptFileL">
+                    <input type="file" id="inptFile" style="display: none;">
+                </label>
+                <p id="fileNameP">
+                    <span id='imgP'>Image : test</span>
+                    <span id='fileP'>file : test</span>
+                </p>
+            </div>
+            <div id="inptsText">
+                <input type="text" placeholder="name" id="inputNameMd">
+                <input type="text" placeholder="v0.00.0">
+                <select name="" id="luncher">
+                    <option selected>Luncher</option>
+                    <option value="Forge">Forge</option>
+                    <option value="Fabric">Fabric</option>
+                </select>
+            </div>
+            <input type="submit">
+        </div>
+    </div>
+    <script>
+        const inptImg = document.querySelector('#inptImg');
+        const inptFile = document.querySelector('#inptFile');
+        const fileNameP = document.querySelector('#fileNameP');
+        const imgP = document.querySelector('#imgP');
+        const fileP = document.querySelector('#fileP');
+
+        inptImg.addEventListener("change", ()=>{
+            const imgName = inptImg.value.split('\\').pop()
+            imgP.innerHTML = `Image : ${imgName}  `
+            
+        });
+        inptFile.addEventListener("change", ()=>{
+            const fileName = inptFile.value.split('\\').pop()
+            fileP.innerHTML = `file : ${fileName}  `
+            
+        })
+
+    </script>
+</body>
+</html>
