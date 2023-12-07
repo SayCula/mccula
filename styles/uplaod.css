@@ -79,6 +79,7 @@ input[type=text] {
     background: none;
     padding: 10px 15px;
     margin: 10px;
+    color: white;
 }
 input::placeholder{
     color: white;
