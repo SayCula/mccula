@@ -1,0 +1,25 @@
+@media (max-width: 600px) {
+    .NavRespo {
+        display: flex ;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .NavRespo li {
+        background-color: var(--Bg-Transport50);
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .active , .CubifyCraft {
+        color: var(--ColorCubifyCraft);
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .nav ,nav > :first-child {
+        display: none !important;
+    }
+    button#btnOpen ,button#btnClose {
+        margin-left: 18rem;
+        
+    }
+};

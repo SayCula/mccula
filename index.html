@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CubifyCraft</title>
+    <title>CubifyCraft Beta</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <!-- <link rel="stylesheet" href="./styles/responsive.css"> -->
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
     <header>
-        <nav id="menu"></nav>
+        <nav id="menu">
+            <ul class="Nav">
+                <li><a href="">CubifyCraft</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Downloads</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><button id="btnLightMod">LightMod</button></li>
+            </ul>
+            <ul class="NavRespo hide">
+                <li><a href="" class="CubifyCraft">CubifyCraft</a>
+                    <button id="btnOpen">=</button>
+                    <button id="btnClose" class="hide">X</button>
+                </li>
+                <div id="menuOpen" class="hide" style="width: 100%;">
+                <li><a href="">Home</a></li>
+                <li><a href="">Downloads</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><button id="btnLightMod">LightMod</button></li>
+                </div>
+            </ul>
+        </nav>
+        
     </header>
     <section>
         <div class="main-center">
@@ -46,13 +69,32 @@
     <div>© <span>CubifyCraft </span>- Where creativity meets quality, Unleash the Extraordinary. All rights reserverd.</div>
 
 </footer>
-<script src="./scripts/index.js"></script>
+<!-- <script src="./scripts/index.js"></script> -->
     <script>
-        const btnLightMod = document.querySelector('#btnLightMod')
-        const body = document.querySelector('body')
+        all();
+        function all(){
+
+            // btnS Open and Close.
+            const btnOpen = document.querySelector('#btnOpen');
+        const btnClose = document.querySelector('#btnClose');
+        // menu list top
+        const menuOpen = document.querySelector('#menuOpen');
+
+        btnOpen.addEventListener('click',()=>{
+            menuOpen.classList.toggle('hide');
+            // btnClose.classList.toggle('hide');
+            // btnOpen.classList.toggle('hide');
+        });
+        
+        
+
+        // btn lightMode.
+        const btnLightMod = document.querySelector('#btnLightMod');
+        const body = document.querySelector('body');
         btnLightMod.addEventListener('click',()=>{
-            body.classList.toggle('lightmod')
-        })
+            body.classList.toggle('lightmod');
+        });
+    }
     </script>
 
 </body>
