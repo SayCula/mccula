@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+    header a {
+        font-size: 15px !important;
+    }
+    header a:hover {
+        font-size: 13px !important;
+    }
+
+}
+@media (max-width: 600px) {
+    .NavRespo {
+        display: flex ;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .NavRespo li {
+        background-color: var(--Bg-Transport50);
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .active , .CubifyCraft {
+        color: var(--ColorCubifyCraft);
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .nav ,nav > :first-child {
+        display: none !important;
+    }
+    button#btnOpen ,button#btnClose {
+        margin-left: 26rem;
+    }
+    #post{
+        width: 42.8% !important;
+    }
+    #adBanner {
+        width: 40% !important;
+        height: 70px !important;
+    }
+    .main-Latest{
+        flex-direction: column;
+    }
+};

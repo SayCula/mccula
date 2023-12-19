@@ -1,0 +1,45 @@
+.CubifyCraft {
+    color: var(--ColorCubifyCraft);
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'cubifycraft';
+}
+header {
+    width: 100%;
+    font-family: 'VT323', monospace;
+    margin: 20px 0;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Nav{
+    background-color: var(--Bg-Transport50);
+    padding: 20px;
+}
+
+
+header a {
+    color: var(--ColorFonts);
+    font-size: var(--FontSizeS);
+    transition:var(--transitionNormal);
+    padding: 15px 20px;
+}
+
+header a:hover{
+    font-size: var(--FontSizeSp); 
+}
+#btnLightMod {
+    background: none;
+    color: var(--ColorFonts);
+    font-size: var(--FontSizeS);
+    transition:var(--transitionNormal);
+    border: none;
+    font-family: 'VT323', monospace;
+}
+#btnLightMod:hover{
+    font-size: var(--FontSizeSp);
+}
