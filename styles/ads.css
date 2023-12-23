@@ -1,0 +1,9 @@
+#adBanner {
+    width: 720px;
+    height: 90px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

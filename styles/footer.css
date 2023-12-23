@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    background-color: var(--BackgroundColor);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: var(--ColorFonts);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer h1 {
+    font-family: 'Minecraft';
+    font-size: 24px;
+}
+
+footer > :nth-child(2){
+    color: var(--ColorMcJava);
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 16rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+footer p:last-child {
+    background: var(--ColorMcJavaB);
+    font-family: 'Minecraft';
+    padding: 10px 5px;
+    text-shadow: 0px 2px black;
+}

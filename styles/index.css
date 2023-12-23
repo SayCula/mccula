@@ -1,0 +1,133 @@
+/* fonts family*/
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+@font-face {
+    font-family: cubifycraft;
+    src: url(../bin/fonts/cubifycraft.ttf);
+}
+@font-face {
+    font-family: Minecraft;
+    src: url(../bin/fonts/Minecraft.ttf);
+}
+@font-face {
+    font-family: MinecraftE;
+    src: url(../bin/fonts/MinecraftE.ttf);
+}
+@font-face {
+    font-family: MinecraftTen;
+    src: url(../bin/fonts/MinecraftTen.ttf);
+}
+:root {
+    --BackgroundColor: #000000;
+    --Bg-Transport50: #00000081;
+    --Bg-image: url(../img/bg/dark.png);
+    --ColorFonts: rgb(204, 204, 204);
+    --ColorCubifyCraft: rgb(204, 0, 82);
+    --ColorMcJava: #0C6E3D;
+    --ColorMcJavaB: #008c45;
+    /* Dungeons */
+    --ColorMcDungeonsB: #ffa41f;
+    --ColorMcDungeons: #8f1f0b;
+    --ColorMcDungeonsS: #ff791a;
+    /* font size */
+    --FontSizeS: 15px;
+    --FontSizeSp: 14px;
+    /* transition */
+    --transitionNormal:  all 0.3s;
+}
+.lightmod {
+    --BackgroundColor: #ffffff;
+    --BackgroundTransport50: #ffffff81;
+    --Bg-image: url(../img/bg/light.png);
+    --ColorFonts: black;
+}
+.hide {
+    display: none;
+}
+body {
+    
+    background: var(--Bg-image);
+    color: var(--ColorFonts);
+    font-family: 'Cairo', sans-serif;
+    --sb-track-color: #797979;
+    --sb-thumb-color: var(--ColorFonts);
+    --sb-size: 10px;
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+}
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size) 
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+    }
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--ColorFonts);
+}
+.main-Latest {
+    display: flex;
+    margin-top: 6rem;
+    color: var(--ColorFonts);
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-center {
+    display: flex;
+    color: var(--ColorFonts);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: var(--ColorMcJavaB);
+    border: outset 3px var(--ColorMcJava);
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 12px;
+    text-shadow: 0 1px BLACK;
+    position: absolute;
+    z-index: 1;
+    bottom: 96%;
+    left: 65%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

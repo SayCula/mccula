@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Text File</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+            background-color: #001c22;
+        }
+        div#show {
+            background: black;
+            color: #5ae1ff;
+            padding: 0 21px 21px;
+            font-weight: bold;
+            font-family: system-ui;
+        }
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #202020;
+            padding: 20px;
+        }
+        input, button {
+            margin: 15px;
+            padding: 15px 20px;
+            background: none;
+            border: #5ae1ff 1px solid;
+            color: #5ae1ff;
+        }
+        input:hover {
+            border-radius: 15px 46px;
+        }
+        input:focus{
+            background-color: #00252d;
+            border-radius: 46px 15px;
+        }
+        input:focus::placeholder{
+            color: #5ae1ff;
+        }
+        button:hover{
+            color: #202020;
+            background-color: #5ae1ff;
+            cursor: pointer;
+            border-radius: 15px 46px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="number" id="inputID" placeholder="ID">
+        <input type="text" id="inputName" placeholder="NAME">
+        <button id="createFileBtn" accesskey="p">Create Text File</button>
+    </div>
+
+    <div id="show"></div>
+    <script>
+        const btn = document.getElementById('createFileBtn')
+        
+        btn.addEventListener('click', function () {
+            const inputID = document.querySelector('#inputID')
+            const inputName = document.querySelector('#inputName')
+            const show = document.querySelector('#show')
+            const content = `
+            const ${inputName.value} = "https://www.curseforge.com/api/v1/mods/${inputID.value}/files";
+
+            fetch(${inputName.value})
+                .then(response => response.json())
+                .then(data => {
+                data.data.forEach((file, index) => {
+                    const lastThreeDigits = file.id.toString().slice(-3);
+                    const fileName = file.fileName;
+                    const gameVersions = file.gameVersions;
+                    // id link
+                    const modIdArray = file.id.toString().split('');
+                          modIdArray.splice(4, 6);
+                      let modIdLine = modIdArray.join('');
+                      let modIdPart = file.id.toString().slice(-3);
+
+                    // date 
+                    const dateArray = file.dateCreated.split('T');
+                          dateArray.splice(1, 2);
+                    const updatedDate = dateArray[0] + ' ' + dateArray[1];
+                      let updatedDateF = dateArray.join('T');
+                      
+                    const modList = document.querySelector('#${inputName.value}')
+
+                });
+                })
+                .catch(error => console.error("حدث خطأ: ", error));
+            `;
+            show.innerText = content
+
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `./${inputName.value}_api.js`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+    </script>
+</body>
+</html>
