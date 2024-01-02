@@ -3,7 +3,7 @@ export const apiMcCulaJava = [
     {
         id: 1,
         name: 'OptiFine',
-        image: "/img/avatars/McCula.zip.png",
+        image: "./img/avatars/McCula.zip.png",
         class:'mod',
         gamename: 'javaEdition',
         version: '1.20.1',
@@ -14,7 +14,7 @@ export const apiMcCulaJava = [
     {
         id: 2,
         name: 'OptiFine Jei JourneyMap',
-        image: "/img/avatars/McCula.zip.png",
+        image: "./img/avatars/McCula.zip.png",
         class:'mod',
         gamename: 'javaEdition',
         version: '1.20.1',
