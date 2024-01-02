@@ -1,0 +1,106 @@
+@media (max-width: 768px) {
+    header a {
+        font-size: 15px !important;
+    }
+    header a:hover {
+        font-size: 13px !important;
+    }
+    footer > :nth-child(2){
+        padding: 0 !important;
+    }
+    footer p:last-child{
+        font-size: 15px;
+    }
+    .main-Latest{
+        flex-direction: column;
+    }
+    .mods-container-grid{
+        width: 35rem;
+        display: flex !important;
+        overflow-x: scroll;
+    }
+    .main-Latest p{
+        width: 38rem !important;
+        max-height: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .NavRespo {
+        display: flex ;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .NavRespo li {
+        background-color: var(--Bg-Transport50);
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .active , .CubifyCraft {
+        color: var(--ColorCubifyCraft);
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .nav ,nav > :first-child {
+        display: none !important;
+    }
+    button#btnOpen ,button#btnClose {
+        margin-left: 26rem;
+    }
+    #post{
+        width: 42.8% !important;
+    }
+    #adBanner {
+        width: 40% !important;
+        height: 70px !important;
+    }
+    .main-Latest{
+        flex-direction: column;
+    }
+    .mods-container-grid{
+        width: 24rem;
+        display: flex !important;
+        overflow-x: scroll;
+    }
+    .main-Latest p{
+        max-height: 18rem !important;
+        width: 26rem !important;
+    }
+    footer p:last-child{
+        font-size: 9.7px;
+    }
+    footer > :nth-child(2){
+        padding: 0 !important;
+    }
+    .mods-container-grid{
+        padding: 15px;
+    }
+    .mods-container {
+        width: 10rem;
+    }
+};
+
+@media (max-width: 1600px) {
+    .mods-container-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .mods-container-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #js-post{
+        width: 43vw !important;
+    }
+    .mods-container-grid{
+        gap: 1em !important;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .mods-container-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

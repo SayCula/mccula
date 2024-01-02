@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Items with Checkbox</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>قائمة العناصر</h2>
+
+  <label for="optifine">
+    <input type="checkbox" value="optifine" id="optifine" class="filterCheckbox">
+    optifine
+  </label>
+  <label for="minimap">
+    <input type="checkbox" value="minimap" id="minimap" class="filterCheckbox">
+    minimap
+  </label>
+  <label for="items">
+    <input type="checkbox" value="items" id="items" class="filterCheckbox">
+    items
+  </label>
+
+  <p class="show"></p>
+
+  <button onclick="filterItems()">تصفية</button>
+
+  <script>
+    function red() {
+      let input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+    function filterItems() {
+      // احصل على جميع الـ checkboxes
+      let checkboxes = document.querySelectorAll('.filterCheckbox');
+
+      // قائمة لتخزين العناصر المختارة
+      let selectedItems = [];
+
+      // قم بفحص الـ checkboxes وأضف القيم إلى القائمة إذا كانت المربعات محددة
+      checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+          selectedItems.push(checkbox.value);
+        }
+      });
+
+      // قم بطباعة العناصر المختارة
+      const show = document.querySelector(".show");
+      show.innerHTML = `
+        <input type="text" id="myInput" onkeyup="red()">
+        <ul id="myUL">
+          <li><a href="#">${selectedItems.join(' ')}.zip</a></li>
+        </ul>
+      `;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.mods-container {
+    height: 50vh;
+}
+.version-loader {
+    justify-content: center;
+    height: 17vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.version-loader p:first-child {
+    background-color: var(--ColorMcJavaB);
+    padding: 1px 5px;
+    border-radius: 9px;
+    text-shadow: 0 1px BLACK;
+}
