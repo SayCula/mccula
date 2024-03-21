@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads</title>
+</head>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+<style>
+    body {
+        background-color: black;
+        color: aliceblue;
+        background-image: url(./dark.png);
+
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .btns div {
+        position: absolute;
+        box-shadow: 0px 0 9px 1px antiquewhite;
+        border: 1px solid white;
+        border-radius: 15px;
+        transition: all 0.3s;
+        
+    }
+    button {
+        padding: 2rem;
+        color: aliceblue;
+        cursor: pointer;
+        background: none;
+        border: none;
+        
+    }
+    .a {
+        top: 20%;
+        transform: translate(-50%, -20%);
+        box-shadow: 0px 0 9px 1px antiquewhite;
+    }
+    .a:hover {
+        background-color: antiquewhite;
+        color: black;
+        box-shadow: 0px 0 9px 1px antiquewhite;
+        
+    }
+    .a button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .a button:hover {
+        color: black;
+    }
+    .b {
+        bottom: 15%;
+        transform: translate(-50%, -15%);
+    }
+    .b:hover {
+        background-color: brown;
+        color: aliceblue;
+        box-shadow: 0px 0 9px 1px brown;
+        font-size: 20px;
+        border-color: brown;
+    }
+    .c {
+        left: 35%;
+        transform: translate(-35%, -50%);
+    }
+    .e {
+        right: 35%;
+        transform: translate(35%, -50%);
+    }
+    .hide {
+        display: none;
+    }
+    #menu {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        border: none;
+        box-shadow: none;
+    }
+    #menu:focus:hover {
+        color: red;
+    }
+    #menu:focus {
+        border: none;
+        padding: 1rem;
+        font-weight: bold;
+        color: aqua;
+    }
+    #ThanksBody {
+        position: fixed;
+    top: 0;
+    background: #66339975;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+</style>
+<body>
+    <main>
+        <div>
+            <div class="btns">
+                <div class="a">
+                    <button id="OptiForge"></button>
+                </div>
+                <!-- <div class="b">
+                    <button></button>
+                </div>
+                <div class="c">
+                    <button></button>
+                </div>
+                <div class="e">
+                    <button></button>
+                </div> -->
+                <div id="menu">
+                    <button>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/hqymfzvj.json"
+                            trigger="hover"
+                            colors="primary:#ffffff"
+                            style="width:50px;height:50px">
+                        </lord-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        const btnMenu = document.querySelector('#menu')
+        const buttonA = document.querySelector('.a')
+        const buttonB = document.querySelector('.b')
+        const buttonC = document.querySelector('.c')
+        const buttonE = document.querySelector('.e')
+        const OptiForge = document.querySelector('#OptiForge')
+
+        let OptiForgeTitle = `OptiForge <span>v1.20.4</span>`
+        OptiForge.innerHTML = OptiForgeTitle
+
+        OptiForge.addEventListener('click', ()=>{
+            // window.open('http://www.facebook.com', '_blank')
+            OptiForge.innerHTML = "Thanks u";
+
+            let ThanksBody = document.createElement('div')
+            ThanksBody.id = 'ThanksBody'
+            document.body.appendChild(ThanksBody)
+            let textThx = document.createElement('p')
+            document.querySelector('#ThanksBody').appendChild(textThx)
+            textThx.innerHTML = `
+            reDownload
+            <button id="OptiForge">
+                        OptiForge
+                        <span>v1.20.4</span>
+                    </button>
+            <button id="close">close</button>
+            `;
+            
+            document.querySelector('#close').addEventListener('click', ()=>{
+                ThanksBody.remove()
+                OptiForge.innerHTML = OptiForgeTitle;
+            })
+            
+        })
+
+
+        btnMenu.addEventListener('click', ()=>{
+            
+            if(btnMenu.innerHTML === true){
+                btnMenu.innerHTML =  `x`
+            }else if(btnMenu.innerHTML === false){
+                btnMenu.innerHTML = `+`;
+            }
+            removeHide(buttonA)
+            removeHide(buttonB)
+            removeHide(buttonC)
+            removeHide(buttonE)
+            function removeHide(hide){
+                hide.classList.toggle('hide')
+            }
+
+        })
+    </script>
+</body>
+</html>
