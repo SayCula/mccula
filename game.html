@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة التخمين</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: "Cairo Play", sans-serif;
+            margin: 0;
+        }
+        .game-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #008cba;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f5f;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        img {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>لعبة التخمين</h1>
+    <p>اختر رقم من 1 إلى 10:</p>
+    <div class="button-container" id="buttons"></div>
+    <img src="ghost.jpg" alt="" class="hide ">
+    <p id="message"></p>
+    <script>
+
+let randomNumber = generateRandomNumber();
+
+const buttonsContainer = document.getElementById('buttons');
+
+for (let i = 1; i <= 10; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.addEventListener('click', () => checkGuess(i));
+    buttonsContainer.appendChild(button);
+}
+
+function generateRandomNumber() {
+    return Math.floor(Math.random() * 10) + 1;
+}
+
+function checkGuess(guess) {
+    const message = document.getElementById('message');
+    if (guess === randomNumber) {
+        message.textContent = 'تهانينا! لقد خمنت الرقم الصحيح. سيتم توليد رقم جديد الآن.';
+        randomNumber = generateRandomNumber(); 
+    } else {
+        
+        document.querySelector('img').classList.remove('hide')
+        setTimeout(()=>{
+            document.querySelector('img').classList.add('hide')
+        },3000)
+        message.textContent = 'خطأ! حاول مرة أخرى.';
+
+    }
+}
+
+
+    </script>
+</body>
+</html>
